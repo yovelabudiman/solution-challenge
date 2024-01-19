@@ -1,0 +1,29 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5ef0af;
+}
+
+.container {
+    display: flex;
+}
+
+.leftNav {
+    width: 50%;
+    background-color:rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(140, 24, 24);
+}
+
+.rightNav{
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    padding:20px;
+     display: flex;
+    justify-content: space-between;
+}
+
