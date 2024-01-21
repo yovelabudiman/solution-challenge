@@ -3,27 +3,93 @@ body {
     margin: 0;
     padding: 0;
     background-color: #5ef0af;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
-}
-
-.leftNav {
-    width: 50%;
-    background-color:rgb(255, 255, 255);
+    background-color: white;
+  }
+  
+  .leftNav {
+    width: 40%;
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
     color: rgb(140, 24, 24);
-}
-
-.rightNav{
+  }
+  
+  .rightNav {
     flex: 1;
-    background-color: rgb(255, 255, 255);
-    padding:20px;
-     display: flex;
+    padding: 22px;
+    display: flex;
     justify-content: space-between;
-}
-
+  }
+  
+  .rightNav a {
+    font: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .mainText,
+  .textContent {
+    width: 675px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: -0.25px;
+    margin: auto;
+    padding: 50px;
+  }
+  
+  .textContent {
+    width: auto;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: -0.20px;
+    text-align: center;
+  }
+  
+  .switchButton {
+    border: 3px solid #2076c2;
+    border-radius: 20px;
+    color: black;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    background-color: rgb(249, 207, 255);
+  }
+  
+  .buttonArea {
+    text-align: center;
+  }
+  
+  .toggle-button {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px 0 20px 20px;
+    color: black;
+  }
+  
+  @media (max-width: 775px) {
+    .rightNav {
+      display: none;
+    }
+  
+    .toggle-button {
+      display: flex;
+    }
+  
+    .mainText,
+    .textContent {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
