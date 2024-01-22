@@ -1,4 +1,20 @@
-body {
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-label {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(140, 24, 24);
+    cursor: pointer;
+    left: 0;
+    padding: 16.5px;
+    padding-right: 5px;
+  }
+  
+  body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -12,7 +28,7 @@ body {
   
   .leftNav {
     width: 40%;
-    padding: 20px;
+    padding: 20px 0px 20px 20px;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
@@ -33,6 +49,32 @@ body {
     color: black;
   }
   
+  .verticalNav {
+    width: 0px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 67px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: width 0.3s ease;
+  }
+
+  .verticalNav a {
+    font: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding-top: 15px;
+  }
+
+  #menu-toggle:checked ~ .verticalNav  {
+    width: 200px;
+  }
+
   .mainText,
   .textContent {
     width: 675px;
@@ -69,23 +111,15 @@ body {
     text-align: center;
   }
   
-  .toggle-button {
-    display: none;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 20px 0 20px 20px;
-    color: black;
-  }
-  
   @media (max-width: 775px) {
     .rightNav {
       display: none;
     }
   
-    .toggle-button {
+    #menu-label {
       display: flex;
     }
-  
+
     .mainText,
     .textContent {
       width: auto;
