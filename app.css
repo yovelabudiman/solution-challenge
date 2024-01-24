@@ -1,4 +1,4 @@
-  /* MAIN PAGE */
+  
   #menu-toggle {
     display: none;
   }
@@ -15,7 +15,7 @@
     padding-right: 5px;
   }
   
-  body {
+  .main-body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -137,53 +137,3 @@
       font-size: 45px;
     }
   }
-
-
-/* PROGRESS PAGE */
-.bill-button-area {
-  padding-left: 10px;
-}
-
-.billButton {
-  border: 3px solid #2076c2;
-    border-radius: 20px;
-    color: black;
-    display: inline-block;
-    padding: 15px 35px;
-    text-decoration: none;
-    margin: 25px 0;
-    background-color: rgb(249, 207, 255);
-}
-
-/* .titles {
-  padding-left: 15px;
-  font-size: 50px;
-}
-
-.progress-text {
-  padding-left: 15px;
-  font-size: 30px;
-} */
-
-.left-container{
-  display: flex;
-  /* height: 90vh; */
-  width: auto;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-}
-
-.left-screen {
-  padding: 20px;
-  width: auto;
-  text-align: center;
-  align-items: center;
-  color: white;
-}
-
-.progress-body {
-  background-image: none;
-}
-
