@@ -1,8 +1,22 @@
+.progress-title-text{
+  font-size:100px;
+  margin:0 0 0 80px;
+  padding:0;
+  color:white;
+}
+.progress-text{
+  font-size:20px;
+  margin:0 0 0 90px;
+  padding:0;
+  color:white;
+}
 
 .progress-body {
   margin:0;
   padding: 0;
-  background: linear-gradient(to bottom, #5ea5e8,rgb(20, 107, 134)) no-repeat;
+  background-image: url(file:///Users/yovelaadelinabudiman/Desktop/progress-background.png);
+  background-position: center;
+  background-size: cover;
   height:100vh;
   font-family: 'Arial', sans-serif;
   align-items: center;
@@ -14,25 +28,24 @@
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  background-color: white;
   border-radius: 10px;
   padding: 25px 25px;
-  width: 100%;
-  max-width: 960px;
   display: flex;
   flex-direction: column;
   text-align: center;
   text-transform: uppercase;
   margin-top: 20px; 
-  border-color: rgb(255, 246, 143);
-  border-width: 20px;
-  border-style: solid;
+ 
 }
 
-
-.progress-box:last-child {
-  border-bottom: none;
+.progress-box{
+  border-bottom: 1px solid #e1f1ff;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 10px;
+  background-color: white;
 }
+
 
 .progress-icons {
   margin-bottom: 25px;
@@ -58,7 +71,6 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  border-top: 1px solid #e1f1ff;
 }
 
 .progress-amount {
@@ -69,7 +81,7 @@
   margin-top:25px;
 }
 
-@media (min-width: 900px){
+@media (min-width: 1000px){
   .progress-table {
     flex-direction: row;
   }
