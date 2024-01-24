@@ -8,7 +8,7 @@
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(140, 24, 24);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     left: 0;
     padding: 16.5px;
@@ -19,16 +19,16 @@
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/backdrop.png);
-    background-size:cover;
-    background-repeat:no-repeat;
-    height:100vh;
+    background-image: url(file:///Users/yovelaadelinabudiman/Downloads/test-background.png);
+    background-size: cover;
+    background-position:  bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+
   }
   
   .container {
     display: flex;
-    background-color: rgb(171, 201, 174);
   }
   
   .leftNav {
@@ -37,7 +37,7 @@
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(140, 24, 24);
+    color: rgb(22, 255, 189);
   }
   
   .rightNav {
@@ -50,8 +50,8 @@
   .rightNav a {
     font: 20px;
     font-weight: bold;
-    text-decoration: none;
-    color: black;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
   }
   
   .verticalNav {
@@ -61,7 +61,7 @@
     background-color: #333;
     position: fixed;
     left: 0;
-    top: 67px;
+    top:67px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -78,23 +78,22 @@
 
   .mainText,
   .textContent {
-    width: 900px;
-    justify-content: center;
-    align-items: center;
+    width: 250px;
+    justify-content: left;
+    align-items: left;
     letter-spacing: -0.25px;
-    margin: auto;
-    padding: 70px;
+    padding: 50px 0px 0px 110px;
   }
   
   .textContent {
-    width: auto;
+    width: 250px;
     color: #ffffff;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 50px;
+    font-size: 25px;
     font-weight: bold;
     line-height: 100%;
     letter-spacing: -0.20px;
-    text-align: center;
+    text-align: left;
     
   }
   
@@ -103,14 +102,14 @@
     border-radius: 20px;
     color: black;
     display: inline-block;
-    padding: 15px 35px;
+    padding: 15px 15px;
     text-decoration: none;
-    margin: 25px 0;
-    background-color: rgb(249, 207, 255);
+    background-color: rgb(172, 231, 248);
   }
   
   .buttonArea {
     text-align: center;
+    padding: 0px 0px 20px 110px;
   }
   
   @media (max-width: 1000px) {
@@ -134,6 +133,6 @@
     }
 
     .textContent {
-      font-size: 45px;
+      font-size: 20px;
     }
   }

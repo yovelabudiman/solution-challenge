@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="app.css">
     <title>Progress Page</title>
 </head>
-<body class="progress-body">
-        <div class="container">
     
+    <body class="progress-body">
+        <div class="container">
+
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" id="menu-label">&#9776;</label>
             
@@ -25,37 +26,47 @@
                 <a href="#">My Profile</a>
             </div> 
             
-             <div class="rightNav">
+            <div class="rightNav">
                     <a href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">News</a>
                     <a href="#">Reports</a>
                     <a href="#">My Profile</a>
             </div>
-            
+        </div>   
+        
+        <div class="progress-table">
+            <div class="progress-box">
+                <img src="progress-icons/1.png" alt="" class="progress-icons">
+                <h2 class="progress-header">Target</h2>
+                <div class="progress-amount">50000 kWh</div>
+                <div class="progress-description">
+                    <p class="progress-description-item">Let's aim to use less this month!</p>
+                </div>
+                <a href="#/" class="switchButton">Last month's</a>
+            </div>
+    
+            <div class="progress-box">
+                <img src="progress-icons/2.png" alt="" class="progress-icons">
+                <h2 class="progress-header">Total Points</h2>
+                <div class="progress-amount">900</div>
+                <div class="progress-description">
+                    <p class="progress-description-item">Accumulated points as of today</p>
+                </div>
+                <a href="#/" class="switchButton">View Details</a>
+            </div>
+    
+            <div class="progress-box">
+                <img src="progress-icons/3.png" alt="" class="progress-icons">
+                <h2 class="progress-header">Rewards</h2>
+                <div class="progress-amount">2</div>
+                <div class="progress-description">
+                    <p class="progress-description-item">Vouchers worth $10 from Myers</p>
+                </div>
+                <a href="#/" class="switchButton">Claim Rewards</a>
+            </div>
         </div>
-        <div class="progress-container">
-            <div class="box">
-              <img src="image1.jpg" alt="Image 1">
-              <p class="top-text">TARGET THIS MONTH</p>
-              <p class="mid-text">700L</p>
-              <p class="bottom-text">Let's aim to go lower than this next time!</p>
-            </div>
-        
-            <div class="box">
-              <img src="image2.jpg" alt="Image 2">
-              <p class="top-text">TOTAL POINTS</p>
-              <p class="mid-text">900</p>
-              <p class="bottom-text">Accumulated Points</p>
-            </div>
-        
-            <div class="box">
-              <img src="image3.jpg" alt="Image 3">
-              <p class="top-text">Rewards</p>
-              <p class="mid-text">2</p>
-              <p class="bottom-text">Vouchers woth $10 from Myers*</p>
-            </div>
-          </div>
+    
     </body>
 
 </html>

@@ -1,63 +1,84 @@
-.progress-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-  }
-  
-  .progress-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 92.8px);
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 10px;
-    box-sizing: border-box;
-    flex: 1;
-  }
-  
-  .box {
-    flex: 0 0 calc(33.333% - 20px); 
-    margin-bottom: 20px;
-    background-color: white;
-    height: 400px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius:20px;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
 
-  .top-text {
-    font-size: 20px;
-    text-align: center;
-  }
+.progress-body {
+  margin:0;
+  padding: 0;
+  background: linear-gradient(to bottom, #5ea5e8,rgb(20, 107, 134)) no-repeat;
+  height:100vh;
+  font-family: 'Arial', sans-serif;
+  align-items: center;
+  justify-content: center;
   
-  .mid-text {
-    font-size: 45px;
-    font-weight: bold;
-    text-align: center;
+}
+
+.progress-table {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px 25px;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px; 
+  border-color: rgb(255, 246, 143);
+  border-width: 20px;
+  border-style: solid;
+}
+
+
+.progress-box:last-child {
+  border-bottom: none;
+}
+
+.progress-icons {
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+
+.progress-header {
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.progress-description {
+  margin: 25px;
+  color: #000000;
+}
+
+.progress-description-item {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 1.5;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-top: 1px solid #e1f1ff;
+}
+
+.progress-amount {
+  color: #016ff9; 
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top:25px;
+}
+
+@media (min-width: 900px){
+  .progress-table {
+    flex-direction: row;
   }
-  
-  .bottom-text {
-    font-size: 20px;
-    margin-left:5px;
-    margin-right:5px;
-    text-decoration: none;
-    text-align: center;
+  .progress-box {
+    border-bottom: none;
+    border-right: 1px solid #e1f1ff;
+    padding: 25px 50px;
   }
-  
-  
-  @media (max-width: 750px) {
-    .box {
-      flex: 0 0 100%;
-    }
+  .progress-box:last-child {
+    border-right: none;
   }
+}
