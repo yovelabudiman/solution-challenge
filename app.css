@@ -19,9 +19,9 @@
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(file:///Users/yovelaadelinabudiman/Downloads/test-background.png);
+    background-image: url(file:///Users/yovelaadelinabudiman/Downloads/test-backgrd.png);
     background-size: cover;
-    background-position:  bottom;
+    background-position:  top;
     background-repeat: no-repeat;
     height: 100vh;
 
@@ -58,7 +58,7 @@
     width: 0px;
     height: 100vh;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000000;
     position: fixed;
     left: 0;
     top:67px;
@@ -78,22 +78,24 @@
 
   .mainText,
   .textContent {
-    width: 250px;
-    justify-content: left;
-    align-items: left;
+    width: auto;
+    margin:auto;
+    padding-top:170px;
+    justify-content: center;
+    align-items: center;
     letter-spacing: -0.25px;
-    padding: 50px 0px 0px 110px;
   }
   
   .textContent {
-    width: 250px;
-    color: #ffffff;
+    display:flex;
+    width: 700px;
+    color: #000000;
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 40px;
     font-weight: bold;
     line-height: 100%;
     letter-spacing: -0.20px;
-    text-align: left;
+    text-align: center;
     
   }
   
@@ -108,8 +110,11 @@
   }
   
   .buttonArea {
-    text-align: center;
-    padding: 0px 0px 20px 110px;
+    display:flex;
+    padding-top:40px;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
   }
   
   @media (max-width: 1000px) {
@@ -125,25 +130,22 @@
       display: flex;
     }
 
-    .main-body{
-      background-image: url(file:///Users/yovelaadelinabudiman/Desktop/backgggg.png);
-    }
-
     .mainText,
     .textContent {
-      margin:50px 25px 0 25px;
-      width: auto;
-      justify-content: left;
-      align-items: left;
+      width:auto;
+      margin:0 40px;
+      justify-content: center;
+      align-items: center;
       letter-spacing: -0.25px;
-      padding: 10px;
+
     }
 
  
     .textContent {
-      font-size: 50px;
+      font-size: 30px;
     }
 
+  
     .buttonArea{
       margin:auto;
       padding:35px;
