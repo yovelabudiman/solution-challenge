@@ -1,0 +1,35 @@
+.upload-body {
+    margin:0;
+    padding: 0;
+    background-image: url(file:///Users/yovelaadelinabudiman/Downloads/test-backgroundd.png);
+    background-position: center;
+    background-size: cover;
+    height:100vh;
+    font-family: 'Arial', sans-serif;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .upload-title-text{
+    font-size:62px;
+    margin: 170px 0 0 0;
+    padding:0;
+    color:white;
+  }
+  
+  .upload-title{
+    display:flex;
+    width:auto;
+    padding:0;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+ .upload-button{
+    display:flex;
+    padding-top:40px;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+ }
