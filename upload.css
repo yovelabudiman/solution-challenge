@@ -1,7 +1,7 @@
 .upload-body {
     margin:0;
     padding: 0;
-    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/4y42y4.png);
+    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/blue-backdrop.png);
     background-position: center;
     background-size: cover;
     height:100vh;
@@ -14,7 +14,7 @@
     font-size:62px;
     margin: 170px 0 0 0;
     padding:0;
-    color:rgb(0, 0, 0);
+    color:#fbf88b;
   }
   
   .upload-title{
