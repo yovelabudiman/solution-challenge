@@ -1,5 +1,6 @@
 .about-body{
-    background-color: #000269;
+    background-color: #79cafa;
+    font-family: 'Arial', sans-serif;
 }
 .about-content-container{
     display:flex;
@@ -29,16 +30,16 @@
 }
 
 .about-text-1-content{
-    color:white;
-    font-size:25px;
+    color:#000269;
+    font-size:23px;
 }
 
 .about-text-2-content{
-    color:white;
-    font-size:25px;
+    color:#000269;
+    font-size:23px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1030px) {
     .about-content-container {
         display: flex;
         flex-direction: column; 
@@ -53,12 +54,13 @@
       }
 
       .about-image-container img {
-        width: 70%;
+        width: 40%;
         margin:auto;
     }
 
     .about-text-1-content, .about-text-2-content{
-        font-size:20px;
+        font-size:17px;
+        text-align:center;
     }
 
     .about-button-div{
