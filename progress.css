@@ -2,13 +2,13 @@
   font-size:62px;
   margin:15px 0 0 80px;
   padding:0;
-  color:white;
+  color:rgb(27, 5, 99);
 }
 .progress-text{
   font-size:15px;
   margin:0 0 0 90px;
   padding:0;
-  color:white;
+  color:rgb(42, 29, 223);
 }
 
 .progress-title{
@@ -23,7 +23,6 @@
   margin:0;
   padding: 0;
   background-image: url(file:///Users/yovelaadelinabudiman/Desktop/pqdwhpdw.png);
-  /* background-position: top; */
   background-size: cover;
   height:100vh;
   font-family: 'Arial', sans-serif;
@@ -47,13 +46,10 @@
 }
 
 .progress-box{
-  /* border-radius: 20px; */
+  border-radius: 20px;
   padding: 20px 5px;
-  margin: 15px;
+  margin: 30px;
   background-color: white;
-  /* border-color: rgb(57, 173, 255); */
-  /* border-style: solid; */
-  /* border-width: 10px; */
 
 }
 

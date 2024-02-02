@@ -1,13 +1,20 @@
 .about-body{
     background-color: #000269;
 }
-.about-container{
+.about-content-container{
     display:flex;
 }
 
 .about-image-container{
     flex:1;
     margin:50px;
+    display: flex;
+    align-items: center;
+}
+
+.about-image-container img{
+    max-width: 100%;
+    height: auto;
 }
 
 .about-text-container{
@@ -26,11 +33,38 @@
     font-size:25px;
 }
 
-.about-text-2{
-
-}
-
 .about-text-2-content{
     color:white;
     font-size:25px;
+}
+
+@media (max-width: 1150px) {
+    .about-content-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+      }
+      .about-text-container{
+        margin-top:0;
+      }
+
+      .about-image-container{
+        margin:0;
+      }
+
+      .about-image-container img {
+        width: 70%;
+        margin:auto;
+    }
+
+    .about-text-1-content, .about-text-2-content{
+        font-size:20px;
+    }
+
+    .about-button-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
