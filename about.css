@@ -1,0 +1,36 @@
+.about-body{
+    background-color: #000269;
+}
+.about-container{
+    display:flex;
+}
+
+.about-image-container{
+    flex:1;
+    margin:50px;
+}
+
+.about-text-container{
+    flex:1;
+    width:auto;
+    margin: 75px 100px;
+
+}
+
+.about-text-1{
+   margin-bottom:25px;
+}
+
+.about-text-1-content{
+    color:white;
+    font-size:25px;
+}
+
+.about-text-2{
+
+}
+
+.about-text-2-content{
+    color:white;
+    font-size:25px;
+}
