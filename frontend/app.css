@@ -1,153 +1,166 @@
+#menu-toggle {
+  display: none;
+}
+
+#menu-label {
+  display: none;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  left: 0;
+  padding: 16.5px;
+  padding-right: 5px;
+}
+
+.main-body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/1.png);
+
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.container {
+  display: flex;
+  /* background-color:rgb(0, 0, 0); */
   
-  #menu-toggle {
+}
+
+.leftNav {
+  width: 40%;
+  padding: 20px 0px 20px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(4, 29, 119);
+}
+
+.rightNav {
+  flex: 1;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightNav a {
+  font: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+}
+
+.verticalNav {
+  width: 0px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+  position: fixed;
+  left: 0;
+  top:67px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: width 0.3s ease;
+}
+
+.verticalNav a {
+  font: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  padding-top: 15px;
+}
+.mainText{
+  display:flex;
+}
+
+.mainText,
+.textContent {
+  width: auto;
+  /* margin:auto; */
+  /* padding-top:170px; */
+  text-align: center;
+  
+  letter-spacing: -0.25px;
+  bottom: 65px;
+
+  
+  
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+ 
+}
+
+.textContent {
+  position:fixed;
+  /* display:flex; */
+  width: 880px;
+  color: #000000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 100%;
+  letter-spacing: -0.20px;
+  text-align: center;
+  
+}
+
+.switchButton {
+  border: 3px solid #033866;
+  border-radius: 20px;
+  color: black;
+  display: inline-block;
+  padding: 15px 15px;
+  text-decoration: none;
+  background-color: rgb(172, 231, 248);
+}
+
+.buttonArea {
+  position:fixed;
+  /* display:flex; */
+  bottom:0;
+  padding-top:40px;
+  margin-bottom:45px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .rightNav {
     display: none;
+  }
+  
+  #menu-toggle:checked ~ .verticalNav  {
+    width: 200px;
   }
 
   #menu-label {
-    display: none;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    left: 0;
-    padding: 16.5px;
-    padding-right: 5px;
-  }
-  
-  .main-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/1.png);
-    background-size: cover;
-    background-position:  top;
-    background-repeat: no-repeat;
-    height: 100vh;
-
-  }
-  
-  .container {
     display: flex;
-  }
-  
-  .leftNav {
-    width: 40%;
-    padding: 20px 0px 20px 20px;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: rgb(4, 29, 119);
-  }
-  
-  .rightNav {
-    flex: 1;
-    padding: 22px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .rightNav a {
-    font: 20px;
-    font-weight: bold;
-    text-decoration: underline;
-    color: rgb(255, 255, 255);
-  }
-  
-  .verticalNav {
-    width: 0px;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #000000;
-    position: fixed;
-    left: 0;
-    top:67px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    transition: width 0.3s ease;
-  }
-
-  .verticalNav a {
-    font: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    padding-top: 15px;
   }
 
   .mainText,
   .textContent {
-    width: auto;
-    margin:auto;
-    padding-top:220px;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: -0.25px;
-  }
-  
-  .textContent {
-    display:flex;
-    width: 880px;
-    color: #000000;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 100%;
-    letter-spacing: -0.20px;
-    text-align: center;
-    
-  }
-  
-  .switchButton {
-    border: 3px solid #2076c2;
-    border-radius: 20px;
-    color: black;
-    display: inline-block;
-    padding: 15px 15px;
-    text-decoration: none;
-    background-color: rgb(172, 231, 248);
-  }
-  
-  .buttonArea {
-    display:flex;
-    padding-top:40px;
-    margin:auto;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  @media (max-width: 1000px) {
-    .rightNav {
-      display: none;
-    }
-    
-    #menu-toggle:checked ~ .verticalNav  {
-      width: 200px;
-    }
-
-    #menu-label {
-      display: flex;
-    }
-
-    .mainText,
-    .textContent {
       width:auto;
-      margin:0 40px;
-      justify-content: center;
-      align-items: center;
+      margin:50px;
       letter-spacing: -0.25px;
-
-    }
-
- 
-    .textContent {
-      font-size: 50px;
-    }
-
-  
-    .buttonArea{
-      margin:auto;
-      padding:35px;
-    }
   }
+
+  .textContent {
+  width:500px;
+    font-size: 40px;
+    margin-bottom:110px;
+  }
+
+  .buttonArea{
+    margin-bottom:80px;
+    /* padding:35px; */
+  }
+}
