@@ -1,12 +1,13 @@
 .input-body{
     margin:0;
     padding: 0;
-    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/gsgsegsg.png);
+    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/4.png);
     background-position: center;
     background-size: cover;
     background-repeat:no-repeat;
     height:100vh;
-    font-family: 'Arial', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+
     align-items: center;
     justify-content: center;
 
@@ -14,7 +15,7 @@
 
 .input-title-text{
     color:white;
-    margin:65px;
+    margin:90px;
     margin-bottom:40px;
     font-size:75px;
     text-align:center;

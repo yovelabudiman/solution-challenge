@@ -19,7 +19,7 @@
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(file:///Users/yovelaadelinabudiman/Downloads/test-backgrd.png);
+    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/1.png);
     background-size: cover;
     background-position:  top;
     background-repeat: no-repeat;
@@ -80,7 +80,7 @@
   .textContent {
     width: auto;
     margin:auto;
-    padding-top:210px;
+    padding-top:220px;
     justify-content: center;
     align-items: center;
     letter-spacing: -0.25px;
@@ -88,10 +88,10 @@
   
   .textContent {
     display:flex;
-    width: 700px;
+    width: 880px;
     color: #000000;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
     line-height: 100%;
     letter-spacing: -0.20px;
@@ -142,7 +142,7 @@
 
  
     .textContent {
-      font-size: 30px;
+      font-size: 50px;
     }
 
   

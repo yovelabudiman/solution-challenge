@@ -1,11 +1,14 @@
 .progress-title-text{
-  font-size:62px;
+  font-size:90px;
   margin:15px 0 0 80px;
   padding:0;
   color:rgb(27, 5, 99);
+
+  font-family:Arial, Helvetica, sans-serif;
 }
+
 .progress-text{
-  font-size:15px;
+  font-size:35px;
   margin:0 0 0 90px;
   padding:0;
   color:rgb(27, 5, 99);
@@ -17,12 +20,13 @@
   margin:auto;
   align-items: center;
   justify-content: center;
+
 }
 
 .progress-body {
   margin:0;
   padding: 0;
-  background-image: url(file:///Users/yovelaadelinabudiman/Desktop/efhwofw.png);
+  background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/2.png);
   background-size: cover;
   height:100vh;
   font-family: 'Arial', sans-serif;
