@@ -41,13 +41,13 @@
   flex-direction: row;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 20px; 
+  margin-top: 60px; 
  
 }
 
 .progress-box{
   border-radius: 20px;
-  padding: 20px 5px;
+  padding: 35px 20px;
   margin: 30px;
   background-color: white;
 
