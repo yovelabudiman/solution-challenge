@@ -28,18 +28,18 @@
 
 }
 
-.fixed-nav{
+.fixed-nav {
   position: fixed;
   top: 0;
   width: 100%;
   color: white;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 
 .container {
   display: flex;
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .leftNav {
@@ -72,7 +72,7 @@
   background-color: #000000;
   position: fixed;
   left: 0;
-  top:67px;
+  top: 35px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -80,14 +80,15 @@
 }
 
 .verticalNav a {
-  font: 20px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   color: white;
   padding-top: 15px;
 }
-.mainText{
-  display:flex;
+
+.mainText {
+  display: flex;
 }
 
 .mainText,
@@ -95,23 +96,23 @@
   width: auto;
   text-align: center;
   letter-spacing: -0.25px;
-  bottom: 65px;
+  bottom: 100px;
   justify-content: center;
   align-items: center;
- 
+
 }
 
 .textContent {
-  position:fixed;
-  width: 880px;
+  position: fixed;
+  width: 955px;
   color: #000000;
   font-feature-settings: 'clig' off, 'liga' off;
-  font-size: 60px;
+  font-size: 48px;
   font-weight: bold;
   line-height: 100%;
   letter-spacing: -0.20px;
   text-align: center;
-  
+
 }
 
 .switchButton {
@@ -125,10 +126,10 @@
 }
 
 .buttonArea {
-  position:fixed;
-  bottom:0;
-  padding-top:40px;
-  margin-bottom:45px;
+  position: fixed;
+  bottom: 0;
+  padding-top: 40px;
+  margin-bottom: 45px;
   align-items: center;
   justify-content: center;
 }
@@ -137,8 +138,8 @@
   .rightNav {
     display: none;
   }
-  
-  #menu-toggle:checked ~ .verticalNav  {
+
+  #menu-toggle:checked~.verticalNav {
     width: 200px;
   }
 
@@ -148,33 +149,34 @@
 
   .mainText,
   .textContent {
-      width:auto;
-      margin:50px;
-      letter-spacing: -0.25px;
+    width: auto;
+    margin: 50px;
+    letter-spacing: -0.25px;
   }
 
   .textContent {
-  width:500px;
-    font-size: 44px;
-    margin-bottom:110px;
+    width: 700px;
+    font-size: 45px;
+    margin-bottom: 110px;
   }
 
-  .buttonArea{
-    margin-bottom:80px;
+  .buttonArea {
+    margin-bottom: 80px;
   }
 }
 
 @media(max-height:200px) {
   .textContent {
-    width:200;
-      font-size: 25px;
-      margin-bottom:40px;
-    }
+    width: 200;
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
 
-    .switchButton{
-      font-size:10px;
-    }
-    .buttonArea{
-      margin-bottom:30px;
-    }
+  .switchButton {
+    font-size: 10px;
+  }
+
+  .buttonArea {
+    margin-bottom: 30px;
+  }
 }

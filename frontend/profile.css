@@ -1,0 +1,51 @@
+.profile-body {
+    margin: 0;
+    padding: 0;
+    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/profile-pic.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: calc(100vh-20px);
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-title {
+    font-size: 90px;
+    margin: 45px 0 0 80px;
+    padding: 0;
+    color: rgb(27, 5, 99);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-title-container {
+    width: auto;
+    padding: 0;
+    margin: 80px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 115px;
+    margin-top: 30px;
+}
+
+.detail-content {
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.input-field {
+    flex-grow: 1;
+}

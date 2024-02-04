@@ -1,36 +1,62 @@
 .upload-body {
-    margin:0;
-    padding: 0;
-    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/3.png);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height:100vh;
-    font-family: 'Arial', sans-serif;
-    align-items: center;
-    justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/3.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-title-text {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 170px;
+  padding: 0;
+  color: #000000;
+  background-color: #fbf88b;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.upload-title {
+  display: flex;
+  width: auto;
+  padding: 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-button {
+  display: flex;
+  padding-top: 40px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:1000px) and (max-height:475px) {
+
+  .upload-title {
+    margin-bottom: 0;
   }
 
-  .upload-title-text{
-    font-size:60px;
-    margin: 170px 0 0 0;
-    padding:0;
-    color:#000000;
-  }
-  
-  .upload-title{
-    display:flex;
-    width:auto;
-    padding:0;
-    margin:auto;
-    align-items: center;
-    justify-content: center;
+  .upload-title-text {
+    font-size: 35px;
+    margin-top: 100px;
+    margin-bottom: 5px;
   }
 
- .upload-button{
-    display:flex;
-    padding-top:40px;
-    margin:auto;
-    align-items: center;
-    justify-content: center;
- }
+  .upload-button {
+    padding-top: 20px;
+  }
+
+  .switchButton {
+    font-size: 15px;
+  }
+
+}

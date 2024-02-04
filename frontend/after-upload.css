@@ -1,27 +1,27 @@
-.after-upload-title-text{
-    font-size:62px;
-    margin:15px 0 0 80px;
-    padding:0;
-    color:white;
-  }
-  
-  .after-upload-title{
-    width:auto;
-    padding:0;
-    margin:auto;
-    align-items: center;
-    justify-content: center;
-  }
+.after-upload-title-text {
+  font-size: 62px;
+  margin: 15px 0 0 80px;
+  padding: 0;
+  color: white;
+}
 
-  .after-upload-body {
-    margin:0;
-    padding: 0;
-    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/uploaded-file.png);
-    background-position: center;
-    background-size: cover;
-    height:100vh;
-    font-family: 'Arial', sans-serif;
-    align-items: center;
-    justify-content: center;
-    
-  }
+.after-upload-title {
+  width: auto;
+  padding: 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.after-upload-body {
+  margin: 0;
+  padding: 0;
+  background-image: url(file:///Users/yovelaadelinabudiman/Desktop/uploaded-file.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  align-items: center;
+  justify-content: center;
+
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,65 +9,67 @@
 
     <title>Input Page</title>
 </head>
-    
+
 <body class="input-body">
-    <body class="main-body">
-        <div class="fixed-nav">
-            <div class="container">
-    
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" id="menu-label">&#9776;</label>
-                
-                <div class="leftNav">
-                    LoremIpsum
-                </div>
-    
-                <div class="verticalNav">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">News</a>
-                    <a href="#">Your Progress</a>
-                    <a href="#">My Profile</a>
-                </div> 
-                
-                <div class="rightNav">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Upload</a>
-                        <a href="#">Report</a>
-                        <a href="#">My Profile</a>
-                </div>
+    <div class="fixed-nav">
+        <div class="container">
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" id="menu-label">&#9776;</label>
+
+            <div class="leftNav">
+                LoremIpsum
+            </div>
+
+            <div class="verticalNav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">News</a>
+                <a href="#">Your Progress</a>
+                <a href="#">My Profile</a>
+            </div>
+
+            <div class="rightNav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Upload</a>
+                <a href="#">Report</a>
+                <a href="#">My Profile</a>
             </div>
         </div>
+    </div>
 
-   
-        <div class="input-title">
-            <h1 class="input-title-text">Let us know how you did this month!</h1>
+
+    <div class="input-title">
+        <h1 class="input-title-text">Let us know how you did this month!</h1>
+    </div>
+
+    <div class="form-input-container">
+
+        <div class="actual-form">
+            <form>
+                <label class="form-label" for="provider">1. What is the name of your provider?</label>
+                <input class="form-input" type="text" id="provider" name="provider" placeholder="Enter provider name">
+
+                <label class="form-label" for="invoice-number">2. What is your bill's invoice number?</label>
+                <input class="form-input" type="text" id="invoice-number" name="invoice-number"
+                    placeholder="Enter invoice number">
+
+                <label class="form-label" for="electricity">3. How much electricity did you use?</label>
+                <input class="form-input" type="text" id="electricity" name="electricity"
+                    placeholder="Enter electricity information">
+
+                <label class="form-label" for="hot-water">4. How much hot water did you use? </label>
+                <input class="form-input" type="text" id="hot-water" name="hot-water"
+                    placeholder="Enter hot water information">
+
+                <label class="form-label" for="fileInput">5. Upload your bill here:</label>
+                <input class="form-input" type="file" id="fileInput" name="fileInput">
+            </form>
+
+            <button class="switchButton" type="submit-button">Submit</button>
         </div>
 
-        <div class="form-input-container">
-
-            <div class="actual-form">
-                <form>
-                    <label class="form-label" for="provider">1. What is the name of your provider?</label>
-                    <input class="form-input" type="text" id="provider" name="provider" placeholder="Enter provider name">
-                
-                    <label class="form-label" for="invoice-number">2. What is your bill's invoice number?</label>
-                    <input class="form-input" type="text" id="invoice-number" name="invoice-number" placeholder="Enter invoice number">
-                
-                    <label class="form-label" for="electricity">3. How much electricity did you use?</label>
-                    <input class="form-input" type="text" id="electricity" name="electricity" placeholder="Enter electricity information">
-                
-                    <label class="form-label" for="hot-water">4. How much hot water did you use? </label>
-                    <input class="form-input" type="text" id="hot-water" name="hot-water" placeholder="Enter hot water information">
-
-                    <label class="form-label" for="fileInput">5. Upload your bill here:</label>
-                    <input class="form-input" type="file" id="fileInput" name="fileInput">
-                </form>
-                
-                <button class="switchButton" type="submit-button">Submit</button>
-            </div>
-        
     </div>
 
 </body>
