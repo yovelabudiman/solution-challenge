@@ -26,7 +26,7 @@
 .progress-body {
   margin: 0;
   padding: 0;
-  background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/2.png);
+  background-image: url(page-icons/progress-bg.png);
   background-size: cover;
   height: calc(100vh - 50px);
   font-family: 'Arial', sans-serif;
@@ -52,8 +52,8 @@
 .progress-box {
   border-radius: 20px;
   padding: 35px 20px;
-  margin: 30px;
-  background-color: white;
+  margin: 0 30px;
+  background-color: #fffcab;
 
 }
 
@@ -101,19 +101,45 @@
     border-bottom: none;
     border-right: 1px solid #e1f1ff;
     padding: 25px 50px;
+    margin: 10px 30px;
   }
 
   .progress-box:last-child {
     border-right: none;
   }
 
+  .progress-title {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .progress-title-text {
     margin: 0;
-    padding: 25px;
-    font-size: 50px;
+    margin-top:20px;
+    font-size: 70px;
   }
 
   .progress-text {
     display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .progress-title-text {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .progress-title-text {
+    font-size: 55px;
+    padding:10px;
+    background-color: #fffcab;
+    border-radius: 15px;
+  }
+  .progress-box {
+    padding: 15px 30px;
+    margin: 20px 30px;
   }
 }

@@ -19,8 +19,7 @@
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/1.png);
-
+  background-image: url(page-icons/main-bg.png);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -96,7 +95,7 @@
   width: auto;
   text-align: center;
   letter-spacing: -0.25px;
-  bottom: 100px;
+  bottom: 21%;
   justify-content: center;
   align-items: center;
 
@@ -113,24 +112,27 @@
   line-height: 100%;
   letter-spacing: -0.20px;
   text-align: center;
+  background-color: #faf7b7;
+  border-radius: 20px;
+  padding:15px;
 
 }
 
 .switchButton {
+  font-size:18px;
   border: 3px solid #033866;
   border-radius: 20px;
   color: black;
   display: inline-block;
-  padding: 15px 15px;
+  padding: 8px 28px;
   text-decoration: none;
-  background-color: rgb(172, 231, 248);
+  background-color: rgb(222, 242, 255);
 }
 
 .buttonArea {
   position: fixed;
-  bottom: 0;
+  bottom: 18%;
   padding-top: 40px;
-  margin-bottom: 45px;
   align-items: center;
   justify-content: center;
 }
@@ -153,7 +155,6 @@
   .mainText,
   .textContent {
     width: auto;
-    bottom: 80px;
     margin: 70px;
     letter-spacing: -0.25px;
   }
@@ -165,10 +166,11 @@
   }
 
   .buttonArea {
-    margin-bottom: 80px;
+    bottom: 18%;
   }
 
   .switchButton{
+    font-size:23px;
     padding:8px 8px;
   }
 }
@@ -195,15 +197,15 @@
   }
 
   .textContent {
-    font-size: 25px;
+    font-size: 23px;
   }
 
   .switchButton {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .buttonArea {
-    margin-bottom: 30px;
+    bottom: 16%;
   }
 }
 
@@ -211,18 +213,18 @@
  
 
   .textContent {
-    font-size: 15px;
+    font-size: 19px;
     bottom: 80px;
     margin:40px;
     margin-bottom: 30px;
   }
 
   .switchButton {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .buttonArea {
-    margin-bottom: 20px;
+    bottom: 13%;
   }
 }
 
@@ -230,17 +232,17 @@
  
 
   .textContent {
-    font-size: 12px;
+    font-size: 16px;
     bottom: 60px;
     margin:40px;
     margin-bottom: 20px;
   }
 
   .switchButton {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .buttonArea {
-    margin-bottom: 28px;
+    bottom:10%;
   }
 }

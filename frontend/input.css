@@ -1,7 +1,7 @@
 .input-body {
     margin: 0;
     padding: 0;
-    background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/4.png);
+    background-image: url(page-icons/input-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,8 +41,10 @@
 
 .form-label {
     display: block;
-    color: white;
+    color: #fbf88b;
     font-size: 20px;
+    font-weight:600;
+    margin-bottom:5px;
 }
 
 .form-input {
@@ -53,11 +55,6 @@
     box-sizing: border-box;
     font-size: 13px;
 }
-
-.switchButton {
-    margin-bottom: 0;
-}
-
 @media (max-width: 900px) {
     .input-title-text {
         font-size: 35px;
