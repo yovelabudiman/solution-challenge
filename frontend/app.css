@@ -43,7 +43,7 @@
 }
 
 .leftNav {
-  width: 40%;
+  width: 45%;
   padding: 7px 20px;
   font-size: 19px;
   font-weight: bold;
@@ -135,7 +135,7 @@
   justify-content: center;
 }
 
-@media (max-width: 700px) , (max-height:700px) {
+@media (max-width:700px){
   .rightNav {
     display: none;
   }
@@ -147,7 +147,9 @@
   #menu-label {
     display: flex;
   }
+}
 
+@media (max-width: 700px), (max-height:700px) {
   .mainText,
   .textContent {
     width: auto;
