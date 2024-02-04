@@ -5,7 +5,8 @@
     background-position: center;
     background-size: cover;
     background-repeat:no-repeat;
-    height:100vh;
+    background-attachment: fixed;
+    height:calc(100vh-20px);
     font-family:Arial, Helvetica, sans-serif;
 
     align-items: center;
@@ -13,30 +14,42 @@
 
 }
 
-.input-title-text{
-    color:white;
-    margin:90px;
-    margin-bottom:40px;
-    font-size:75px;
-    text-align:center;
-}
-
-.form-input-container {
-    width: auto;
-    letter-spacing: -0.25px;
-    margin: 0;
-    margin-top:90px;
-  
+.input-title{
+    /* position:fixed; */
+    margin:70px 15px 15px 15px;
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
+.input-title-text{
+    color:white;
+    margin:0;
+    font-size:70px;
+    text-align:center;
+  
+}
+
+.form-input-container {
+    width: auto;
+    letter-spacing: -0.25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom:0;
+}
+
+/* .actual-form{
+    align-items: center;
+    justify-content: center; */
+/*  */
+
 .form-label {
     display: block;
     /* margin-bottom: 8px; */
     color:white;
-    font-size:25px;
+    font-size:20px;
 }
 
 .form-input {
@@ -45,9 +58,31 @@
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
-    font-size:20px;
+    font-size:13px;
 }
 
 .switchButton{
-    margin-bottom:60px;
+    margin-bottom:0;
+    /* margin-bottom:60px; */
 }
+
+
+
+@media (max-width: 900px){
+    .input-title-text {
+    font-size:35px;
+      margin:5px 10px 0 10px;
+
+    }
+
+    .form-input-container{
+        flex-direction: column;
+        margin-top:20px;
+    }
+
+    .form-label{
+        font-size:15px;
+    }
+
+}
+  

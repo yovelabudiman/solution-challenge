@@ -4,6 +4,7 @@
     background-image: url(file:///Users/yovelaadelinabudiman/Desktop/Website%20Design/3.png);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     height:100vh;
     font-family: 'Arial', sans-serif;
     align-items: center;
