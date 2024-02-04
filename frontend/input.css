@@ -23,8 +23,10 @@
 .input-title-text {
     color: white;
     margin: 0;
-    font-size: 70px;
     text-align: center;
+    font-size: 90px;
+    padding: 0;
+    color: rgb(27, 5, 99);
 }
 
 .form-input-container {

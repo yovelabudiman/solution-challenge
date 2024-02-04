@@ -40,12 +40,47 @@
 .detail-content {
     margin: 10px;
     background-color: #ffffff;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 430px;
 }
 
-.input-field {
-    flex-grow: 1;
+.label {
+    text-align: left;
+    flex: 1;
+    font-size:20px;
+    font-weight:700;
+  }
+
+  .input-field {
+    text-align: right;
+    flex: 1;
+    font-size:20px;
+  }
+
+@media (max-width: 800px) and (max-height:800px) {
+    .profile-title {
+        font-size: 50px;
+        margin: 25px 0 0 30px;
+    }
+
+    .profile-details{
+        margin-left:25px;
+    }
+
+    .detail-content {
+        width:250px;
+        padding:15px;
+    }
+    
+    .label {
+        font-size:15px;
+        font-weight:700;
+      }
+    
+      .input-field {
+        font-size:15px;
+      }
 }
