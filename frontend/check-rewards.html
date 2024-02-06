@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    <title>Home Page</title>
+    <link rel="stylesheet" href="progress.css">
+    <link rel="stylesheet" href="check-rewards.css">
+    <title>Rewards Page</title>
 </head>
 
-<body class="main-body">
+<body class="rewards-body">
     <div class="fixed-nav">
         <div class="container">
 
@@ -39,16 +41,31 @@
         </div>
     </div>
 
-    <div class="mainText">
-        <p class="textContent">
-            Here at Green Snap Solutions, we want to help the world save the earth. Join our community today to support what we
-            do!
-        </p>
-
-        <div class="buttonArea">
-            <a href="about.html" class="switchButton">Find out more</a>
-        </div>
+    <div class="progress-title">
+        <h1 class="progress-title-text">Your rewards</h1>
+        <p class="progress-text">Claim them before they expire!</p>
     </div>
+
+    
+    <div class="rewards-list">
+            <ul>
+              <li>
+                <span>2x Vouchers from Myers worth $10 each</span>
+                <button class="switchButton" onclick="sendEmail('email@example.com')">Send Email</button>
+              </li>
+              <li>
+                <span>1x Vouchers from Zara Melbourne worth $50 each</span>
+                <button class="switchButton" onclick="sendEmail('email@example.com')">Send Email</button>
+              </li>
+              <li>
+                <span>3x Vouchers from Woolies Brunswick worth $15 each</span>
+                <button class="switchButton" onclick="sendEmail('email@example.com')">Send Email</button>
+              </li>
+            </ul>
+          
+
+    </div>
+
 
 </body>
 
