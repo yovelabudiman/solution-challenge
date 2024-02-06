@@ -152,6 +152,11 @@
 }
 
 @media (max-width: 700px), (max-height:700px) {
+  .verticalNav a {
+    font-size: 17px;
+    padding-top: 15px;
+  }
+
   .mainText,
   .textContent {
     width: auto;

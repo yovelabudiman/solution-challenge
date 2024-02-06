@@ -39,21 +39,24 @@
   justify-content: center;
 }
 
-@media (max-width:1000px) , (max-height:475px) {
+.upload-button input {
+  font-size:16px;
+}
+
+@media (max-width:1200px) , (max-height:475px) {
 
   .upload-title {
     margin-bottom: 0;
   }
 
   .upload-title-text {
-    font-size: 25px;
+    font-size: 40px;
     bottom:50%;
     position:fixed;
   }
 
   .switchButton {
-    font-size: 15px;
-    bottom:40%;
+    bottom:35%;
     position:fixed;
   }
 
