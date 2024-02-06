@@ -159,13 +159,11 @@
 
   .mainText,
   .textContent {
-    width: auto;
     margin: 70px;
     letter-spacing: -0.25px;
   }
 
   .textContent {
-    width: 700px;
     font-size: 35px;
     margin-bottom: 110px;
   }
@@ -188,7 +186,6 @@
     margin-bottom: 100px;
   }
   .textContent {
-    width: auto;
     font-size: 28px;
   }
 }
@@ -215,8 +212,6 @@
 }
 
 @media (max-height:400px),  (max-width: 400px)   {
- 
-
   .textContent {
     font-size: 19px;
     bottom: 80px;
