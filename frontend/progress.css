@@ -1,5 +1,5 @@
 .progress-title-text {
-  font-size: 90px;
+  font-size: 8vw;
   margin: 45px 0 0 80px;
   padding: 0;
   color: rgb(27, 5, 99);
@@ -7,7 +7,7 @@
 }
 
 .progress-text {
-  font-size: 35px;
+  font-size: 3.5vw;
   margin: 0 0 0 90px;
   padding: 0;
   color: rgb(27, 5, 99);
@@ -16,8 +16,8 @@
 .progress-title {
   width: auto;
   padding: 0;
-  margin: 50px;
-  margin-bottom: 20px;
+  margin: 2vw;
+  margin-bottom: 1vw;
   align-items: center;
   justify-content: center;
 }
