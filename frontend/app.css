@@ -23,13 +23,19 @@
   background-color: rgb(255, 255, 255);
 }
 
+a {
+  text-decoration: none;
+  color: rgb(10, 115, 93);
+
+}
+
 .leftNav {
   margin-right:auto;
   padding: 7px 10px;
   font-size: 19px;
   font-weight: bold;
   font-style: italic;
-  color: rgb(10, 115, 93);
+  
 }
 
 #menu-toggle {
