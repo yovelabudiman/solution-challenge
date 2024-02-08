@@ -75,7 +75,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: #000000;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 35px;
   display: flex;

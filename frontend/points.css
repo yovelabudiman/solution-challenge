@@ -17,8 +17,8 @@
   li {
     background-color: #fbf88b;
     margin-bottom: 10px;
-    padding: 10px;
-    margin-left: 9vw;
+    padding: 8px;
+    margin-left: 8.5vw;
     display: block;
     width: max-content; 
     border-radius: 20px;
@@ -28,12 +28,8 @@
     font-size:1.5vw;
     color:black;
   }
- 
-  .switchButton{
-    font-size:12px;
-    padding:5px;
-  }
-  
+
+
   @media (max-width: 1000px) {
     ul {
       display: flex;
@@ -58,4 +54,5 @@
         margin:0 5px;
       }
   }
+
   
