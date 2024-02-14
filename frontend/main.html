@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html class="login-home" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <link rel="stylesheet" href="login.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/0ba230c8bd.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
+
+
 </head>
-<body class="login-body">
+
+<body class="main-2-body">
     <div class="container">
         <div class="leftNav">
             <a class="logo-link" href="index.html">Green Snap Solutions</a>
@@ -37,25 +40,18 @@
         </div>
     </div>
  
-    <div class="login-form">
-        <h3>Login</h3>
 
-        <div class="detail-div">
-            <label class="label-login" for="username">Username</label>
-            <input type="text" placeholder="Email" id="login_email">
-
-            <label class="label-login" for="password">Password</label>
-            <input type="password" placeholder="Password" id="login_password">
-
-            <div><button class="switchButton" id="login">Log In</button></div>
-        </div>
-        <p class="create-msg">Feeling left out? <a class="create-link" href="signup.html">Create Account</a></p>
-
-        <div class="google-div">
-            <p>or</p>
-            <div class="google-button" id="google-button"><img src="google.png" class="google-logo" alt="">&nbsp;Sign in with Google</div>
-        </div>
+    <h1 class="app-title" id="app-title"></h1>
+    <ul class="cart-items" id="cart-items">
+    </ul>
+    <div class="input-div">
+        <input type="text" class="input-field" id="input-field" placeholder="Message" autofocus>
+        <button class="add-button" id="add-button"><i class="fa-regular fa-paper-plane"></i></button>
     </div>
-    <script src="index.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+    <div class="logout-div" id="logout">
+        <i class="fa-solid fa-power-off logout-button"></i> <span class="logout-text">Logout</span>
+    </div>
+    <script src="signout.js" type="module"></script>
 </body>
 </html>

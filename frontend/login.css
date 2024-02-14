@@ -40,7 +40,7 @@
     margin: 0;
     padding: 0;
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
     color:#0749ce;
 }
@@ -51,6 +51,7 @@
     font-size: 16px;
     font-weight: 500;
 }
+
 
 input{
 
@@ -121,7 +122,7 @@ button:active {
     background-color: rgba(255, 255, 255, 0.901);
     color: black;
     border-radius: 10px;
-    /* position: absolute; */
+    position: absolute;
     z-index: 5;
     text-align: center;
     animation: dropIn 2.5s linear;
