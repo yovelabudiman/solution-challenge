@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html class="signup-home" lang="en">
+<html class="login-home" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="signup.css">
+    <title>Login</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="app.css">
-    <title>Sign up!</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
-    <!-- <script src="https://kit.fontawesome.com/24e9d13143.js" crossorigin="anonymous"></script> -->
 </head>
-<body class="signup-body">
+<body class="login-body">
     <div class="container">
         <div class="leftNav">
             <a class="logo-link" href="index.html">Green Snap Solutions</a>
@@ -28,7 +26,7 @@
             <a href="profile.html">My Profile</a>
         </div>
 
-        <input type="checkbox" id="menu-toggle">
+        <input class="menutype="checkbox" id="menu-toggle">
         <label for="menu-toggle" id="menu-label">&#9776;</label>
 
         <div class="verticalNav">
@@ -41,24 +39,25 @@
         </div>
 
     </div>
-    
-    <div class="signup-form">
-        <h3>Signup</h3>
+    <div class="login-form">
+        <h3>Login</h3>
 
         <div class="detail-div">
-            <label for="name">Name</label>
-            <input type="text" placeholder="John Doe" id="name">
-
-            <label for="username">Email Id</label>
-            <input type="text" placeholder="johndoe@email.com" id="email">
+            <label for="username">Username</label>
+            <input class="input-form" type="text" placeholder="Email" id="login_email">
 
             <label for="password">Password</label>
-            <input type="password" placeholder="At least 6 characters" id="password">
+            <input class="input-form" type="password" placeholder="Password" id="login_password">
 
-            <div><button class="switchButton" id="register">Register</button></div>
+            <div><button class="login-button" id="login">Log In</button></div>
         </div>
-        <p class="login-msg">Already a member? <a class="login-link" href="login.html">Login</a></p>
+        <p class="create-msg">Feeling left out? <a class="create-link" href="signup.html">Create Account</a></p>
+
+        <div class="google-div">
+            <p>or</p>
+            <div class="google-button" id="google-button"><img src="google.png" class="google-logo" alt="">&nbsp;Sign in with Google</div>
+        </div>
     </div>
-    <script src="signup.js" type="module"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
