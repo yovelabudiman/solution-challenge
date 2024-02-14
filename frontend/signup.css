@@ -6,49 +6,27 @@
 }
 
 .signup-body {
-    /* background-color: black; */
     background-image: url(page-icons/profile-bg.png);
-    /* user-select: none; */
-    /* display: flex; */
-    /* flex-direction: column; */
     align-items: center;
     font-family: 'Arial',sans-serif;
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin:0;
-    padding:0;
-    height: calc(100vh - 30px);
+    display:flex;
+    justify-content: center;
 }
-  
-
-/* .background{
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-}
-.background .shape{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-} */
 
 .signup-form {
+    margin:calc(11vh + 8px) 0 10px 0;
+    flex-direction: column;
     width: 350px;
     background-color: rgba(243, 255, 244, 0.827);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 20px;
-    justify-content: center;
     color: #000000;
 }
 .signup-form *{
@@ -60,17 +38,13 @@
     margin: 0;
     padding: 0;
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 700;
+    text-decoration: wavy;
     text-align: center;
     color:#0749ce;
-    /* background: linear-gradient(-60deg, rgb(0, 34, 255),rgb(255, 178, 63));
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
-label{
+.label-login{
     display: flex;
     margin-top: 30px;
     font-size: 16px;
@@ -175,11 +149,11 @@ button:active {
 }
 
 @media (width < 400px) {
-    .login-form {
+    .signup-form {
         width: 290px;
     }
 
-    .login-form h3 {
+    .signup-form h3 {
         font-size: 25px;
     }
 
