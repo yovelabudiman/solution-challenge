@@ -53,4 +53,322 @@
 
 </body>
 
+<script>
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+    import { getDatabase, ref, push, onValue, remove } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, setPersistence, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+
+    // Set the worker source for PDF.js library
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
+    
+    // Get references to various elements
+    let pdfinput = document.querySelector(".selectpdf"); // Reference to the PDF file input field
+    let pwd = document.querySelector(".pwd"); // Reference to the password input field
+    let upload = document.querySelector(".upload"); // Reference to the upload button
+    let afterupload = document.querySelector(".afterupload"); // Reference to the result section
+    let select = document.querySelector("select"); // Reference to the page selection dropdown
+    let download = document.querySelector(".download"); // Reference to the download link
+    let pdftext = document.querySelector(".pdftext"); // Reference to the text area for displaying extracted text
+    
+    // Event listener for the upload button click
+    upload.addEventListener('click', () => {
+        let file = pdfinput.files[0]; // Get the selected PDF file
+        if (file != undefined && file.type == "application/pdf") {
+            let fr = new FileReader(); // Create a new FileReader object
+            fr.readAsDataURL(file); // Read the file as data URL
+            fr.onload = () => {
+                let res = fr.result; // Get the result of file reading
+                if (pwd.value == "") {
+                    extractText(res, false); // Extract text without password
+                } else {
+                    extractText(res, true); // Extract text with password
+                }
+            }
+        } else {
+            alert("Select a valid PDF file");
+        }
+    });
+    
+    let alltext = ""; // Array to store all extracted text
+    
+    // Asynchronous function to extract text from the PDF
+    async function extractText(url, pass) {
+        try {
+            let pdf;
+            if (pass) {
+                pdf = await pdfjsLib.getDocument({ url: url, password: pwd.value }).promise; // Get the PDF document with password
+            } else {
+                pdf = await pdfjsLib.getDocument(url).promise; // Get the PDF document without password
+            }
+            let pages = pdf.numPages; // Get the total number of pages in the PDF
+            for (let i = 1; i <= pages; i++) {
+                let page = await pdf.getPage(i); // Get the page object for each page
+                let txt = await page.getTextContent(); // Get the text content of the page
+                let text = txt.items.map((s) => s.str).join(" "); // Concatenate the text items into a single string
+                alltext+=text; // Add the extracted text to the array
+            }
+            
+            alltext = alltext.split('. ')
+            console.log(alltext)
+             // Display the result section
+
+            let final_data = new Array();
+            
+            for (let i of alltext) {
+                if (i.toLowerCase().includes("amount") || i.toLowerCase().includes("due date") || i.toLowerCase().includes("period")) {
+                    console.log('looping')
+                    final_data.push(i.toLowerCase());
+                }
+            }
+
+            let amount_due = null;
+            let due_date = null;
+            let bill_period = null;
+            let flag = 0;
+            console.log(final_data)
+            for (let i of final_data) {
+                for (let j of ['$', '€', '¥', '£', '₹', '₽', '฿']) {
+                    if (i.includes(j)) {
+                        amount_due = i;
+                        var local_cur = j;
+                    }
+                }
+
+                let count = 0;
+
+                for (let j of ['jan', 'feb', 'mar', 'apr', 'june', 'july', 'sep', 'oct', 'nov', 'dec']) {
+                    if (i.includes(j)) {
+                        count++;
+                    }
+
+                    if (count == 1 && flag == 0) {
+                        due_date = i;
+                        flag = 1;
+                    }
+
+                    if (count == 2 && flag == 1) {
+                        bill_period = i;
+                        flag = 2;
+                    }
+                }
+            }
+
+            // amount_due=amount_due.split("amount due")
+            // amount_due = amount_due[1]
+            // for(i of amount_due){
+            //     if (i.includes(local_cur)) {
+            //         amount_due = i
+                    
+            //     } 
+            // }
+
+            amount_due = amount_due.split('  ')
+            bill_period = bill_period.split('  ')
+            due_date = due_date.split('  ')
+            console.log(amount_due)
+            let final_flag;
+            let items;
+            for (items of amount_due) {
+                console.log(items)
+                if (items.toLowerCase().includes("=")) {
+                    console.log(items)
+                    final_flag = 1;
+                }
+                if (final_flag) {
+                    if (items.includes("$")) {
+                        console.log(items)
+                        amount_due = items;
+                        final_flag = false;
+                    }
+                }
+            }
+            final_flag = false;
+            let billing_period = "";
+            for (items of bill_period) {
+                if (items.toLowerCase().includes("period")) {
+                    final_flag = true
+                }
+                if (final_flag == true) {
+                    console.log(items)
+                    billing_period += items
+                    if (items.toLowerCase().includes('2023') || items.toLowerCase().includes('2024')) {
+                        break
+                    }
+                }
+            }
+
+            for (items of due_date) {
+                if (items.includes('2023')) {
+                    due_date = items
+                    break
+                }
+            }
+
+            let data_set = {"Amount Due": amount_due, "Due Date": due_date, "Billing Period": billing_period};
+            console.log(data_set);
+
+            pdftext.value = JSON.stringify(data_set)
+            afterProcess();
+
+        var user_name = window.localStorage.getItem('userName')
+        var user_id = window.localStorage.getItem('userID')
+        console.log(user_name)
+
+        const firebaseConfig = {
+            databaseURL: "https://gdsc-solution-pydb-default-rtdb.asia-southeast1.firebasedatabase.app",
+            apiKey: "AIzaSyAnYxWWdqD4nPSIGVCmKZv_Y_oKHQK6P7A",
+            authDomain: "gdsc-solution-pydb.firebaseapp.com",
+            projectId: "gdsc-solution-pydb",
+            storageBucket: "gdsc-solution-pydb.appspot.com",
+            messagingSenderId: "999689302163",
+            appId: "1:999689302163:web:8f9a5328c64a99958c5d66",
+            measurementId: "G-CJT6EKCHHH"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        console.log(app)
+
+        const inputField = document.getElementById('input-field');
+        const addButton = document.getElementById('add-button');
+        const itemsDB = ref(database, `usage_data`);
+        addButton.addEventListener("click", addToDB);
+
+        function addToDB () {
+            const userInput = inputField.value;
+            var filteredText = userInput;
+            console.log(filteredText)
+            let inputVal = filteredText;
+            const d = new Date();
+            let time = d.toLocaleString();
+            let userContent = [user_name,inputVal,time,user_id]
+            if (inputVal.length>0) {
+                push(itemsDB, userContent);
+                console.log(`${inputVal} added to database`);
+                clearInput();
+            }
+            else {
+                let invalid = document.getElementById('input-field');
+                invalid.classList.add('shake')
+                invalid.addEventListener('animationend', () => {
+                    invalid.classList.remove('shake')
+                })
+            }
+        }
+
+        function showAlert(message) {
+            let alertBox = document.createElement('div')
+            alertBox.classList.add('alert-box')
+            alertBox.id = "alert";
+            alertBox.innerHTML = message;
+            document.body.appendChild(alertBox)
+            alertBox.addEventListener('animationend', function() {
+                alertBox.classList.add('disappear')
+            })
+        }
+
+        function clearInput () {
+            inputField.value = "";
+        }
+
+        onValue(itemsDB, function(snapshot) {
+            if (snapshot.exists()) {
+                let itemList = Object.entries(snapshot.val())
+                document.getElementById('cart-items').innerHTML = "";
+                for (let i of itemList) {
+                    let curItem = i;
+                    console.log(curItem)
+                    addItem(curItem);
+                }
+            }
+            else {
+                document.getElementById('cart-items').innerHTML = "";
+            }
+        })
+
+
+        function addItem (val) {
+            let curItemKey = val[0]
+            let curItemUser = val[1][0]
+            let curItemUserId = val[1][3]
+            let curItemTime = val[1][2]
+            console.log(curItemUser)
+            let curItemVal = val[1][1]
+            var cart = document.getElementById('cart-items')
+            var item = document.createElement('li');
+            var msg_div = document.createElement('div'); 
+            const d = new Date()
+            var date_time = document.createElement('p');
+            date_time.classList.add('date-time');
+            date_time.innerHTML = curItemTime;
+            msg_div.classList.add('msg-div')
+            var name_header = document.createElement('p');
+            name_header.classList.add('name-header')
+            var msg = document.createElement('p');
+            msg.classList.add('msg')
+            name_header.innerHTML = curItemUser;
+            item.classList.add('cart-item')
+            msg.innerHTML = curItemVal;
+            item.appendChild(name_header); item.appendChild(msg); item.appendChild(date_time);
+            msg_div.appendChild(item);
+            if (curItemUserId == user_id) {
+                msg_div.style.justifyContent = "right";
+                item.style.backgroundColor = "white";
+                item.style.borderRadius = "13px 13px 0 13px"
+            }
+            cart.appendChild(msg_div); 
+            item.addEventListener('dblclick', function() {
+                let itemLoc = ref(database, `community/${curItemKey}`)
+                if (curItemUserId == `${user_id}`) {
+                    remove(itemLoc)
+                } 
+            })
+        }
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/auth.user
+                const uid = user.uid;
+                console.log(user)
+                console.log(uid);
+                const display_name = auth.currentUser.displayName;
+                document.getElementById('app-title').innerHTML = `Welcome ${display_name}`
+                console.log(auth.currentUser.displayName)
+                // var userId = document.createElement('div')
+                // userId.id = "user-id";
+                // userId.innerHTML = uid;
+                // userId.style.display = "none";
+                // document.body.appendChild(userId)
+                // ...
+            } else {
+                // User is signed out
+                // ...
+                window.location.href = "index.html";
+            }
+        });
+
+
+
+            afterupload.style.display = "flex"; // Display the result section
+            document.querySelector(".another").style.display = "unset"; // Display the "Extract Another PDF" button
+        } catch (err) {
+            alert(err.message);
+        }
+    }
+
+            
+            
+            // Function to handle the post-processing after text extraction
+            function afterProcess() {
+                // Display the extracted text for the selected page
+                afterupload.style.display = "flex"; // Display the result section
+                document.querySelector(".another").style.display = "unset"; // Display the "Extract Another PDF" button
+            }
+</script>
+
 </html>

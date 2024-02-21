@@ -166,6 +166,7 @@
                     }
                 }
             }
+
             // amount_due=amount_due.split("amount due")
             // amount_due = amount_due[1]
             // for(i of amount_due){
@@ -174,7 +175,50 @@
                     
             //     } 
             // }
-            let data_set = {"Amount Due": amount_due, "Due Date": due_date, "Billing Period": bill_period};
+
+            amount_due = amount_due.split('  ')
+            bill_period = bill_period.split('  ')
+            due_date = due_date.split('  ')
+            console.log(amount_due)
+            let final_flag;
+            let items;
+            for (items of amount_due) {
+                console.log(items)
+                if (items.toLowerCase().includes("=")) {
+                    console.log(items)
+                    final_flag = 1;
+                }
+                if (final_flag) {
+                    if (items.includes("$")) {
+                        console.log(items)
+                        amount_due = items;
+                        final_flag = false;
+                    }
+                }
+            }
+            final_flag = false;
+            let billing_period = "";
+            for (items of bill_period) {
+                if (items.toLowerCase().includes("period")) {
+                    final_flag = true
+                }
+                if (final_flag == true) {
+                    console.log(items)
+                    billing_period += items
+                    if (items.toLowerCase().includes('2023') || items.toLowerCase().includes('2024')) {
+                        break
+                    }
+                }
+            }
+
+            for (items of due_date) {
+                if (items.includes('2023')) {
+                    due_date = items
+                    break
+                }
+            }
+
+            let data_set = {"Amount Due": amount_due, "Due Date": due_date, "Billing Period": billing_period};
             console.log(data_set);
 
             pdftext.value = JSON.stringify(data_set)

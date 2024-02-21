@@ -36,6 +36,42 @@
                 <a href="profile.html">My Profile</a>
             </div>
         </div>
+
+        <div class="progress-title">
+            <h1 class="progress-title-text">Current Status</h1>
+            <p class="progress-text">Right here, right now</p>
+        </div>
+        
+        <div class="progress-table">
+            <div class="progress-box" id="sides">
+                <h2 class="progress-header">Usage</h2>
+                <div class="progress-amount" id="current-usage"></div>
+                <div class="progress-description">
+                    <p class="progress-description-item">You achieved the target!</p>
+                </div>
+            </div>
+    
+            <div class="progress-box" id="middle">
+                <div class="box-background">
+                    <h2 class="progress-header" id="middle-header">Points Earned</h2>
+                    <div class="progress-amount" id="middle-amount points-amount"></div>
+                    <div class="progress-description">
+                        <p class="progress-description-item">Points gained this month</p>
+                    </div>
+                    <a href="points.html" class="switchButton">Last Month's</a>
+                </div>
+            </div>
+    
+            <div class="progress-box" id="sides">
+                <h2 class="progress-header">Bill Details</h2>
+                <div class="progress-description">
+                    <p class="progress-description-item" id="bill-period"></p>
+                    <p class="progress-description-item" id="amount-due"></p>
+                    <p class="progress-description-item" id="due-date"></p>
+                </div>
+                <a href="upload.html" class="switchButton">Upload New</a>
+            </div>
+        </div>
      
 
         <div class="progress-title">
@@ -43,10 +79,10 @@
             <p class="progress-text">Right here, right now</p>
         </div>
         
-        <div class="progress-table">
+        <div class="progress-table target-table">
             <div class="progress-box" id="sides">
                 <h2 class="progress-header">Target</h2>
-                <div class="progress-amount">50000 kWh</div>
+                <div class="progress-amount">250 kWh</div>
                 <div class="progress-description">
                     <p class="progress-description-item">Let's aim to use less this month!</p>
                 </div>
@@ -56,7 +92,7 @@
             <div class="progress-box" id="middle">
                 <div class="box-background">
                     <h2 class="progress-header" id="middle-header">Total Points</h2>
-                    <div class="progress-amount" id="middle-amount">900</div>
+                    <div class="progress-amount" id="middle-amount"></div>
                     <div class="progress-description">
                         <p class="progress-description-item">Accumulated points as of today</p>
                     </div>

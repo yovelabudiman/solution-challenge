@@ -17,7 +17,7 @@
   width: auto;
   padding: 0;
   margin: 2.5vw;
-  margin-bottom: 1vw;
+  margin-bottom: 2vw;
   align-items: center;
   justify-content: center;
 }
@@ -26,6 +26,7 @@
   margin: 0;
   padding: 0;
   background-image: url(page-icons/progress-bg.png);
+  background-attachment: fixed;
   background-size: cover;
   height: calc(100vh - 50px);
   font-family: 'Arial', sans-serif;
@@ -51,6 +52,12 @@
   padding: 35px 20px;
   margin: 0 30px;
   background-color: #fffcab;
+  min-width: 300px;
+  min-height: 250px;
+}
+
+.target-table {
+  margin-bottom: 50px;
 }
 
 .progress-icons {
